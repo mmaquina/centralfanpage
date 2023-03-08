@@ -1,4 +1,4 @@
-
+@import 'menu/menu.css';
 h1{
     color: #185279;
     text-align: center;
@@ -6,3 +6,4 @@ h1{
 body{
     background-color: #fffc63;
 }
+h1, nav {display: inline-block; *display: inline; zoom: 1; vertical-align: down;}

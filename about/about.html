@@ -5,13 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="about.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<link rel="stylesheet" href="/menu/menu.css">
+
     <title>About</title>
 </head>
 <body>
+    <nav>
+        <!--Navigation bar-->
+        <div id="nav-placeholder"></div>
+        <script>
+            $(function () {
+            $("#nav-placeholder").load("/menu/menu.html");
+            });
+        </script>
+        <!--end of Navigation bar-->
+	</nav>
     <h1>Who we are</h1>
     <p>Rosario Central was founded in 1889. The club is a pioneer in a plethora of methods to support the team. </p>
     <p> In this page we continue with the good practice of being the first to everything, except to abandon a match before it has finished.</p>
     <p> Hence, we are the first AI supported fan page of a football club.
     </p>
+    
+	<script src="/menu/menu.js"></script>
+
 </body>
 </html>
