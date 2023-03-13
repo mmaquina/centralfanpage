@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Rosario_Central_logo.png/150px-Rosario_Central_logo.png">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<link rel="stylesheet" href="/menu/menu.css">
     <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="weather.css">
+
     <title>Weather in Rosario</title>
 </head>
 <body>
@@ -21,18 +24,7 @@
         <!--end of Navigation bar-->
 	</nav>
     <h1>Live weather in Rosario</h1>
-    <li class="city">
-        <h2 class="city-name" data-name="...">
-          <span>...</span>
-          <sup>...</sup>
-        </h2>
-        <span class="city-temp">...<sup>°C</sup></span>
-        <figure>
-          <img class="city-icon" src="..." alt="...">
-          <figcaption>...</figcaption>
-        </figure>
-      </li>
-      <div id="weather"></div>
+    <div id="container"><div id="weather"></div></div>
     <script src="/menu/menu.js"></script>
     <script src="weather.js"></script>
 

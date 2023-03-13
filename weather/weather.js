@@ -1,4 +1,8 @@
-data = {
+//import { API_KEY } from "secrets.js";
+
+const inputVal = "rosario";
+
+var data = {
     "coord": {
       "lon": 10.99,
       "lat": 44.34
@@ -46,36 +50,38 @@ data = {
     "id": 3163858,
     "name": "Zocca",
     "cod": 200
-  }                        
+  }      
 
-  // const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
+const API_KEY = "secret";
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${API_KEY}&units=metric`;
 
-  // fetch(url)
-  // .then(response => response.json())
-  // .then(data => {
-  //   // do stuff with the data 
-  // })
-  // .catch(() => {
-  //   msg.textContent = "Please search for a valid city 😩";
-  // });
+console.log(url)
+  fetch(url)
+  .then(response => response.json())
+  .then(newData => {
+    data = newData;
+    const { main, name, sys, weather } = data;
+    const icon = `https://openweathermap.org/img/wn/${
+      weather[0]["icon"]
+    }@2x.png`;
+    const li = document.getElementById("weather");
+    const markup = ` 
+    <h2 class="city-name" data-name="${name},${sys.country}"> 
+    <span>${name}</span> 
+    <sup>${sys.country}</sup> 
+    </h2> 
+    <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup> 
+    </div> 
+    <figure> 
+    <img class="city-icon" src=${icon} alt=${weather[0]["main"]}> 
+    <figcaption>${weather[0]["description"]}</figcaption> 
+    </figure> 
+    `;
+    li.innerHTML = markup;
 
-const { main, name, sys, weather } = data;
+  })
+  .catch(() => {
+    console.log("Please search for a valid city 😩");
+  });
 
-const icon = `https://openweathermap.org/img/wn/${
-  weather[0]["icon"]
-}@2x.png`;
-const li = document.getElementById("weather");
-// li.classList.add("city");
-const markup = ` 
-<h2 class="city-name" data-name="${name},${sys.country}"> 
-<span>${name}</span> 
-<sup>${sys.country}</sup> 
-</h2> 
-<div class="city-temp">${Math.round(main.temp)}<sup>°C</sup> 
-</div> 
-<figure> 
-<img class="city-icon" src=${icon} alt=${weather[0]["main"]}> 
-<figcaption>${weather[0]["description"]}</figcaption> 
-</figure> 
-`;
-li.innerHTML = markup;
+

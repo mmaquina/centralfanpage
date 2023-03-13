@@ -1,0 +1,45 @@
+#weather {
+    text-align: center;
+    border-radius: 25px;
+    background-color: #476072;
+    width: fit-content;
+}
+
+h2 {
+    text-align: center;
+    color: #fffc63;
+}
+
+.city-temp {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fffc63;
+    margin-top: 10px;
+}
+
+figcaption {
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #fffc63;
+}
+
+.city-icon {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.city-name sup {
+    padding: 0.2em 0.6em;
+    border-radius: 30px;
+    color: gold;
+    background: darkblue;
+}
+
+/* #container {
+    text-align: center;
+    width: 100%;
+    background-color:aquamarine;
+    align-content: center;
+} */
