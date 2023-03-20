@@ -2,8 +2,12 @@
 h1{
     color: #185279;
     text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
 body{
+    padding-left: 1rem;
     background-color: #fffc63;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 h1, nav {display: inline-block; *display: inline; zoom: 1; vertical-align: down;}
+
